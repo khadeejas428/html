@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	max-width: 100%;
+
+	padding: 20px 20px;
+	text-align: justify;
+}
+.container{
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+ nav{
+ 	width: 100%;
+ 	height: 75px;
+ 	background-color: lightblue;
+ 	line-height: 75px;
+ 	padding: 0 80px;
+ }
+ nav .logo{
+ 	float: left;
+ }
+ nav .logo p{
+ 	font-size: 34px;
+ 	font-weight: bold;
+ 	letter-spacing: 1.5px;
+ 	color: darkblue;
+ 	text-transform: uppercase;
+ }
+ nav ul{
+ 	float: right;
+ }
+ nav ul li{
+ 	list-style: none;
+ 	display: inline-block;
+ }
+ nav ul li a{
+ 	text-decoration: none;
+ 	color: #fff;
+ 	font-size: 18px;
+ 	text-transform: uppercase;
+ 	padding: 0px 20px
+ }
+ nav ul li *:hover{
+ 	color: #000000;
+ }
+ .checkbtn{
+ 	color: #fff;
+ 	font-size: 25px;
+ 	cursor: pointer;
+ 	float: right;
+ 	display: none;
+ }
+ #check{
+ 	display: none;
+ }
+/* HOME */
+.home{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	column-gap: 70px;
+
+}
+.heading-2{
+	width: 100%;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+.home-img{
+	/*border-image-width: 0*/
+	width: 100%;
+	max-width: 200px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.heading-3{
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+.list{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	column-gap: 10px;
+	margin-bottom: 10px;
+} 
+.list-img
+{
+	width: 100%;
+	height: 80px;
+}
+
+
+article > p{
+	font-size: 20px;
+	margin-bottom: 20px;
+	columns: 3 25ch;
+	column-gap: 40px;
+	hyphens: auto;
+}
+.parent{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+
+* table, td, th{
+	border: 1px solid black;
+	max-width: 700px;
+	max-height: 1200px;
+	font-size: 15px;
+	text-align: center;
+	border-collapse: collapse;
+	padding: 10px;
+}
+.child1{
+	max-width: 550px;
+	font-size: 15px;
+	max-height: 600px;
+	font-size: 20px;
+	
+	
+}
+
+iframe {
+	max-width: 100%
+
+
+}
+
+@media screen and (max-width: 950px){
+	nav{
+		padding: 0px 50px;
+	}
+	.checkbtn{
+		display: block;
+	}
+	nav .logo p{
+		font-size: 30px;
+	}
+	nav ul{
+		width: 100%;
+		height: 100vh;
+		background-color: #53694c;
+		position: fixed;
+		top: 250px;
+		left: -100%; 
+		text-align: center;
+		transition: all 0.4s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0px;
+		line-height: 30px;
+	}
+	#check:checked ~ul{
+		left: 0%;
+	}
+
+	.home{
+		width: 100%;
+		grid-template-columns: 1fr;
+	}
+	.home-image{
+		width: 100%;
+	}
+	.lists{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 20px;
+	}
+	.list{
+		grid-template-columns: 1fr 5fr;
+	}
+}
